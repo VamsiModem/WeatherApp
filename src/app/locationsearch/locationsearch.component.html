@@ -1,0 +1,19 @@
+<div>
+  <div class="searchdiv">
+    <form>
+      <input type="text" #search [formControl]="searchText" placeholder="Search for City, Zip or Place" />
+    </form>
+    <div class="placesdiv" *ngIf="places.length > 0">
+      <ul>
+        <li *ngFor="let place of places; let i=index" (click)="getIndex(i)">
+          <div class="placediv">
+              {{ place.description }}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+  

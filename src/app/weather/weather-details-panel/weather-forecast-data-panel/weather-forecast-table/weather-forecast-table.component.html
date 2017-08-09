@@ -1,0 +1,50 @@
+<div class="col-md-12">
+  <table class="table table-hover forecast-table">
+    <thead>
+      <tr>
+        <th *ngFor="let header of headers">
+          <span>
+             {{header}}
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let row of tableRows">
+        <td>
+          <div class="day">
+            {{getMonth(row.date)}}
+          </div>
+          <div>
+            {{getDay(row.date)}}
+          </div>
+        </td>
+        <td>
+          <span>
+           {{row.summary}}
+          </span>
+        </td>
+        <td>
+          <span>
+            {{row.lowTemperature |number: '1.0-0'}}&nbsp;&#8457;/&nbsp;{{row.hightemperature |number: '1.0-0'}}&#8457;
+          </span>
+        </td>
+        <td>
+          <span>
+            {{row.precipitation |number: '1.0-0'}}&#37;
+          </span>
+        </td>
+        <td>
+          <span>
+            {{row.wind}} Mi
+          </span>
+        </td>
+        <td>
+          <span>
+            {{row.humidity |number: '1.0-0'}}&#37;
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

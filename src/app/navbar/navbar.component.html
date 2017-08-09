@@ -1,0 +1,8 @@
+<div class="sidebar-nav col-md-2">
+            <ul class="sidebar-ul col-md-12">
+                <li class="sidebar-brand">
+                    Recent Searches
+                </li>
+                <li *ngFor="let place of places; let i=index" (click)="getSelectedPlace(i)">{{place.description}}</li>
+            </ul>
+        </div>

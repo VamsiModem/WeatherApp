@@ -1,0 +1,48 @@
+<div >
+  <div class="col-md-12 weather-detail-card">
+    <div class="card-header"> 
+      <span class="card-title">
+        Hourly weather
+      </span>
+      <div class="btn-group header-link-group" role="group">
+        <button type="button" class= "btn btn-secondary" (click)="showPreviousTenHours()">
+           <span class="glyphicon glyphicon-arrow-down"></span>&nbsp;
+           10 Hours
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="showNextTenHours()">
+          10 Hours &nbsp;
+           <span class="glyphicon glyphicon-arrow-up"></span>
+           </button>
+      </div>
+    </div>
+    <div>
+    <canvas baseChart style="position: relative; height:30vh; "
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"></canvas>
+    </div>
+    <div class="card-footer">
+      <span class="col-md-2">
+        <img width="80" [src]= "src">
+      </span>
+      <span style="font-size: 1.2em;padding: 28px;" class="col-md-10">
+        {{_chartData.summary}}
+      </span>
+    </div>
+  </div>
+</div>
+
+  <!-- <div class="col-md-6" style="margin-bottom: 10px">
+    <table class="table table-responsive table-condensed">
+      <tr>
+        <th *ngFor="let label of lineChartLabels">{{label}}</th>
+      </tr>
+      <tr *ngFor="let d of lineChartData">
+        <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+      </tr>
+    </table>
+    <button (click)="randomize()">CLICK</button>
+  </div> -->

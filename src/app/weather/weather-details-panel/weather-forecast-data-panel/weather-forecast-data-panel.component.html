@@ -1,0 +1,7 @@
+<div *ngIf="selectedItem ==='table'">   
+    <weather-forecast-table  [tableRows]='tableRows'></weather-forecast-table>
+</div>
+<div *ngIf="selectedItem ==='chart'">   
+    <weather-forecast-chart [tableRows]='tableRows'></weather-forecast-chart>
+</div>
+

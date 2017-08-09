@@ -1,0 +1,13 @@
+<div class="container">
+  <div *ngIf="weatherData" class="row">
+    <div [ngClass]="{'col-md-6': !isDetailedWeatherVisible, 'col-md-12': isDetailedWeatherVisible, 'animate-card':true }">
+      <weather-detail-card  (onShowDetailedWeather)="onShowDetailedWeather($event)" [isDetailedWeatherVisible]="isDetailedWeatherVisible" [locationDescription]='selectedPlace.description' [weatherData]='weatherData'></weather-detail-card>
+    </div>
+     <div class="col-md-6">
+      <weather-day-chart-card [chartData]="hourlyChartData"></weather-day-chart-card>
+    </div>
+  </div>
+  <div *ngIf="weatherData" class="row">
+    <weather-details-panel [selectedPlace]='selectedPlace' [weatherData]='weatherData'></weather-details-panel>
+  </div>
+</div>

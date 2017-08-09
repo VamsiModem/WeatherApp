@@ -1,0 +1,6 @@
+.animate-card{
+    transition: width 0.5s;
+    -moz-transition: width 0.5s; /* Firefox 4 */
+    -webkit-transition: width 0.5s; /* Safari and Chrome */
+    -o-transition: width 0.5s; /* Opera */
+}

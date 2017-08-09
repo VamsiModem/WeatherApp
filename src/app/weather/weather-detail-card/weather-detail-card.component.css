@@ -1,0 +1,80 @@
+
+.weather-detail-card{
+    margin-top: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 3px;
+    
+}
+
+.short-discription{
+    padding-top: 10px;
+    float: right;
+    padding: 10px 10px 10px 20px;
+}
+.degree{
+    top: -2.5em;
+    font-size: 1.0em;
+    left: -0.8em;
+}
+.temperature{
+    font-size: 3.5em;
+}
+.summary{
+    margin-top: -0.7em;
+}
+.weather-detail-card{
+    margin-top: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 3px;
+}
+.card-header{
+   
+    height: 50px;
+    padding: 12px 10px 12px 10px;
+    border-bottom: 1px solid lightgray;
+}
+.card-title{
+        float: left;
+    font-size: 1.35em;
+}
+
+.header-link-group{
+        float: right;
+}
+
+.header-link-group .link{
+        float: right;
+}
+.card-footer{
+    border-top: 1px solid lightgray;
+}
+
+.detailed-span{
+    padding: 8px;
+    float: right;
+    font-size: 1.2em;
+    color: lightgray;
+    margin-bottom: 5px;
+}
+.detailed-span:hover{
+    margin-bottom: 5px;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 8px;
+    color: grey;
+    cursor: pointer;
+}
+ .hour-list{
+     list-style: none;
+     overflow-x: auto;
+     white-space: nowrap;
+     margin: 10px 10px 10px 10px;
+     
+ }
+.hour-list li{
+     list-style: none;
+     display: inline-block;
+
+ }
+    

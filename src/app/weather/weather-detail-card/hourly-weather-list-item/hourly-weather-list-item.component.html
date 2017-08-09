@@ -1,0 +1,34 @@
+
+  <div class="minute-card">
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <div class="day-time">
+             <div class="col-md-12">
+              <span class="day">
+                 {{getDay(data.time)}}
+              </span>
+              <span class="time">
+                 {{getTime(data.time)}}
+               </span>
+            </div>
+             <span class="temperature">
+                {{data.temperature | number: '1.0-0'}}
+             </span>
+             <sup class="degree"> &#8457;</sup>
+          </div>
+            <div class="col-md-10 col-md-offset-1 summary">
+              {{data.summary}}
+            </div>
+            <div class="col-md-12 ">
+              {{data.humidity*100 |number: '1.0-0'}}
+            </div>
+           
+            <div class="col-md-12">
+              {{data.precipProbability *100 | number: '1.0-0'}}
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+

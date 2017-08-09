@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row weather-detail-card">
+    <div class="header">
+
+        <span class="btn-group table-chart col-md-9" role="group">
+          <button type="button" [ngClass]="{'btn': true, 'btn-secondary': true, 'btn-active': selectedItem ==='chart'}"  (click)="setSelectedItem('chart')">
+            Chart
+          </button>
+          <button type="button" [ngClass]="{'btn': true, 'btn-secondary': true, 'btn-active': selectedItem ==='table'}" (click)="setSelectedItem('table')">
+            Table
+          </button>
+        </span>
+        <span class="btn-group header-link col-md-3" role="group">
+          <button type="button" [ngClass]="{'btn': true, 'btn-secondary': true, 'btn-active': !isForecast}" (click)="showPastWeather()">
+            <span class="glyphicon glyphicon-arrow-down"></span>&nbsp;
+            8 Days
+          </button>
+          <button type="button" [ngClass]="{'btn': true, 'btn-secondary': true, 'btn-active': isForecast}" (click)="showForecast()">
+            8 Days &nbsp;
+            <span class="glyphicon glyphicon-arrow-up"></span>
+          </button>
+        </span>
+    </div>
+      <div>
+        <weather-forecast-data-panel [selectedItem]='selectedItem' [(weatherData)]='dailyData'></weather-forecast-data-panel>
+      </div>
+  </div>
+</div>

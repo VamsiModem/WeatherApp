@@ -1,0 +1,62 @@
+  <div class="col-md-12 weather-detail-card">
+    <div>
+    <div class="card-header"> 
+      <span class="card-title">
+        Current weather
+      </span>
+    </div>
+    <div>
+    <div style="padding-top:20px;">
+      <span class="col-md-8">
+        <div style="font-size:1.3em;">
+          {{locationDescription}}
+        </div>
+        <div style="font-size:1.0em;">
+          {{days[date.getDay()]}},&nbsp;{{months[date.getMonth()]}}&nbsp;{{date.getDate()}}&nbsp;
+        </div>
+      </span>
+      <span class="col-md-4">
+        <span style="float:right;color:#989496; font-size:1.2em;">Feels Like&nbsp;{{_weatherData.currently.apparentTemperature |number: '1.0-0'}} &#8457;</span>
+      </span>
+    </div>
+      <div class="row">
+        <span class="col-md-6">
+            <img width="120" [src]= "src">
+        </span>
+        <span class="col-md-6">
+          <div class="short-discription">
+            <span>
+              <div>
+                <span class="temperature">
+                  {{_weatherData.currently.temperature |number: '1.0-0'}} 
+                </span>
+                <sup class="degree"> &#8457;</sup>
+                <div class="summary">
+                {{_weatherData.currently.summary}}
+                </div>
+              </div>
+            </span>
+          </div>
+        </span>
+      </div>
+      <div *ngIf="!isDetailedWeatherVisible">
+        <span>
+           <img width="120" [src]= "sunSrc" [alt]="sunrise" title="sunrise">
+        </span>
+          <span style="float:right;">
+           <img width="120" [src]= "moonSrc" [alt]="sunset" title="sunset">
+        </span>
+      </div>
+      <div class="row" *ngIf="isDetailedWeatherVisible">
+        <ul class="hour-list">
+          <li *ngFor="let hour of _weatherData.hourly.data">
+               <hourly-weather-list-item [data]="hour"></hourly-weather-list-item>
+          </li>
+        </ul>
+      </div>
+      <div>
+          <a (click)="onDetailedClick()"> 
+            <span class="detailed-span">Detailed</span>
+          </a>
+      </div>
+  </div>

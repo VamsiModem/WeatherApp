@@ -1,0 +1,43 @@
+.minute-card{
+    border: 1px solid #f7f6f5;
+    height: 200px;
+    width: 150px;
+    display: inline-block;
+    background-color: #f7f6f5;
+    border-right: 1px solid lightgray;
+}
+.minute-card:hover{
+    background-color: #eaeaea;;
+}
+.degree{
+    top: 1.2em;
+    font-size: 1.0em;
+    float: right;
+    left: 4em;
+}
+.temperature{
+    float: right;
+    padding: 10px 20px 5px 5px;
+    padding-right: 30px;
+    font-size: 2.5em;
+        color:#7f8284;
+}
+.day-time{
+    padding: 5px 5px 5px 5px;
+}
+.day-time .day{
+    color: #01af9c;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.day-time .time{
+    color: #e9b409;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.summary{
+    color: #336795;
+    font-size: 1.2em;
+    font-weight: 500;
+}
